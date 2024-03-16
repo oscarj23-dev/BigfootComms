@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, Alert } from 'react-native';
 import TabCard from './components/card';
 
-const Separator = () => <View style={styles.speratator} />;
 
 export default function App() {
   return (
@@ -10,14 +9,14 @@ export default function App() {
     <StatusBar style='auto' />
       <ScrollView style={styles.scrollView}>
         <View style={styles.cardContainer}>
-          <TabCard title='TabCard Component 1' img='../assets/resources.png' />
-          <TabCard title='TabCard Component 2' />
-          <TabCard title='TabCard Component 3' />
-          <TabCard title='TabCard Component 4' />
-          <TabCard title='TabCard Component 5' />
-          <TabCard title='TabCard Component 6' />
-          <TabCard title='TabCard Component 7' />
-          <TabCard title='TabCard Component 8' />
+          <TabCard title='Calendar' image='calendar.png' />
+          <TabCard title='news' image='news.png'/>
+          <TabCard title='Elder Resources' />
+          <TabCard title='Resources' image='resources.png' />
+          <TabCard title='Tribal Government' image='tribal.png' />
+          <TabCard title='Public Health' image='public-health.png' />
+          <TabCard title='About Us' image='about-us.png' />
+          <TabCard title='Bigfoot Portal' image='bigfoot-logo.png' />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -35,7 +34,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent:'space-evenly',
   },
   scrollView: {
     marginVertical:25,
