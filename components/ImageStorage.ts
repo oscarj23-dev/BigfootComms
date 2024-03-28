@@ -25,6 +25,9 @@
       ['tribal.png',
       require('../assets/app-images/tribal.png')
       ],
+      ['elder-resources.png',
+      require('../assets/app-images/elder-resources.png')
+      ],
     ]);
 
     static GetImage = (key:string):NodeRequire => {

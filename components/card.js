@@ -19,14 +19,15 @@ export default function TabCard(props) {
 			</Pressable>
 		</View>
 	);
-
 }
+
 const styles = StyleSheet.create({
   card: {
 		width:177,
 		height:124 + (172.3 - 124),
     borderRadius:25,
 		justifyContent:'space-evenly',
-		alignItems: 'center'
+		alignItems: 'center',
+		borderWidth:1,
   },
 });
