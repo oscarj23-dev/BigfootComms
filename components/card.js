@@ -1,9 +1,7 @@
 import React from 'react';
 import { Card } from '@rneui/themed';
 import { BackgroundImage } from './ImageStorage';
-import { StyleSheet, Text, View, Pressable, Alert, Image } from 'react-native';
-
-
+import { StyleSheet, View, Pressable, Alert, Image } from 'react-native';
 
 export default function TabCard(props) {
 	return (
