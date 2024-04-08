@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Alert } from 'react-native';
@@ -28,6 +30,24 @@ export default function HomeScreen() {
 			</View>
 
 	);
+}
+
+const HomeStack = createNativeStackNavigator();
+
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen name="Details" component={DetailsScreen} /> 
+      <HomeStack.Screen name='Calendar' component={CalendarScreen} />
+      <HomeStack.Screen name='News' component={NewsScreen} />
+      <HomeStack.Screen name='Elder Resources' component={ElderResourcesScreen} />
+      <HomeStack.Screen name='Resources' component={ResourcesScreen} />
+      <HomeStack.Screen name='Tribal Government' component={TribalGovernmentScreen} />
+      <HomeStack.Screen name='Public Health' component={PublicHealthScreen} />
+      <HomeStack.Screen name='About Us' component={AboutUsScreen} />
+      <HomeStack.Screen name='Bigfoot Portal' component={BigfootPortalScreen} />
+    </HomeStack.Navigator>
+  );
 }
 
 const styles = StyleSheet.create({
