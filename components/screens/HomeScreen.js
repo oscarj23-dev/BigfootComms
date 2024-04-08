@@ -1,64 +1,24 @@
 import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Alert } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import TabCard from '../card';
 
-// Screens
-import AboutUsScreen from './AboutUs';
-import BigfootPortalScreen from './BigfootPortal';
-import CalendarScreen from './CalendarScreen';
-import DetailsScreen from './DetailsScreen';
-import ElderResourcesScreen from './ElderResources';
-import NewsScreen from './News';
-import PublicHealthScreen from './PublicHealth';
-import ResourcesScreen from './Resources';
-import TribalGovernmentScreen from './TribalGovernment';
-
-
-export default function HomeScreen() {
-    return (
-			<View>
-        <HomeStackScreen />
-				<StatusBar style='auto' />
-				<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-					<Text onPress={() => Alert.alert("This is the home screen")}
-						style={{ fontSize: 26, fontWeight: 'bold'}}> Home Screen</Text>
-        </View>
-
-				<ScrollView style={styles.scrollView}>
-					<View style={styles.cardContainer}>
-						<TabCard title='Calendar' image='calendar.png' />
-						<TabCard title='News' image='news.png'/>
-						<TabCard title='Elder Resources' image='elder-resources.png' />
-						<TabCard title='Resources' image='resources.png' />
-						<TabCard title='Tribal Government' image='tribal.png' />
-						<TabCard title='Public Health' image='public-health.png' />
-						<TabCard title='About Us' image='about-us.png' />
-						<TabCard title='Bigfoot Portal' image='bigfoot-logo.png' />
-					</View>
-				</ScrollView>
-			</View>
-
-	);
-}
-
-const HomeStack = createNativeStackNavigator();
-
-function HomeStackScreen() {
+export default function HomeScreen({ navigation }) {
   return (
-    <HomeStack.Navigator>
-      <HomeStack.Screen name="Details" component={DetailsScreen} /> 
-      <HomeStack.Screen name='Calendar' component={CalendarScreen} />
-      <HomeStack.Screen name='News' component={NewsScreen} />
-      <HomeStack.Screen name='Elder Resources' component={ElderResourcesScreen} />
-      <HomeStack.Screen name='Resources' component={ResourcesScreen} />
-      <HomeStack.Screen name='Tribal Government' component={TribalGovernmentScreen} />
-      <HomeStack.Screen name='Public Health' component={PublicHealthScreen} />
-      <HomeStack.Screen name='About Us' component={AboutUsScreen} />
-      <HomeStack.Screen name='Bigfoot Portal' component={BigfootPortalScreen} />
-    </HomeStack.Navigator>
-  );
+    <View>
+      <ScrollView style={styles.scrollView}>
+        <View style={styles.cardContainer}>
+          <TabCard navigation={navigation} title="Calendar" image="calendar.png" />
+          <TabCard navigation={navigation} title="News" image="news.png" />
+          <TabCard navigation={navigation} title='Elder Resources' image='elder-resources.png' />
+          <TabCard navigation={navigation} title='Resources' image='resources.png' />
+          <TabCard navigation={navigation} title='Tribal Government' image='tribal.png' />
+          <TabCard navigation={navigation} title='Public Health' image='public-health.png' />
+          <TabCard navigation={navigation} title='About Us' image='about-us.png' />
+          <TabCard navigation={navigation} title='Bigfoot Portal' image='bigfoot-logo.png' />
+        </View>
+      </ScrollView>
+    </View>
+	);
 }
 
 const styles = StyleSheet.create({

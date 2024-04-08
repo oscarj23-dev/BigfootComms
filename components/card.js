@@ -1,22 +1,20 @@
 import React from 'react';
 import { Card } from '@rneui/themed';
 import { BackgroundImage } from './ImageStorage';
-import { StyleSheet, View, Pressable, Alert, Image } from 'react-native';
+import { StyleSheet, View, Pressable, Image } from 'react-native';
 
-export default function TabCard(props) {
-	return (
-		<View>
-			<Pressable onPress={() => Alert.alert('You pressed the: '+ props.title + ' button!')}>
-				<Card containerStyle={styles.card}>	
-					<Image 
-						source={BackgroundImage.GetImage(props.image)} 
-					/>
-					<Card.Divider></Card.Divider>
-					<Card.Title>{props.title}</Card.Title>
-				</Card>
-			</Pressable>
-		</View>
-	);
+export default function TabCard({ navigation, title, image }) {
+  return (
+    <View>
+      <Pressable onPress={() => navigation.navigate(title)}>
+        <Card containerStyle={styles.card}>
+          <Image source={BackgroundImage.GetImage(image)} />
+          <Card.Divider />
+          <Card.Title>{title}</Card.Title>
+        </Card>
+      </Pressable>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
