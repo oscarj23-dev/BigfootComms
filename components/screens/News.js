@@ -2,12 +2,12 @@ import * as React from 'react';
 import { View, Text, Alert} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-export default function NewsScreen({ navigation }) {
+export default function NewsScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <StatusBar style='auto' />
       <Text onPress={() => Alert.alert("You pressed the news button!")}
-        style={{ fontSize: 26, fontWeight: 'bold'}}> Settings Screen
+        style={{ fontSize: 26, fontWeight: 'bold'}}> News Screen
       </Text>
     </View>
 	);
