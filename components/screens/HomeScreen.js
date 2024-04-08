@@ -1,14 +1,25 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Alert } from 'react-native';
 import TabCard from '../card';
 
+// Screens
+import AboutUsScreen from './AboutUs';
+import BigfootPortalScreen from './BigfootPortal';
+import CalendarScreen from './CalendarScreen';
+import DetailsScreen from './DetailsScreen';
+import ElderResourcesScreen from './ElderResources';
+import NewsScreen from './News';
+import PublicHealthScreen from './PublicHealth';
+import ResourcesScreen from './Resources';
+import TribalGovernmentScreen from './TribalGovernment';
+
+
 export default function HomeScreen() {
     return (
 			<View>
+        <HomeStackScreen />
 				<StatusBar style='auto' />
 				<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 					<Text onPress={() => Alert.alert("This is the home screen")}
