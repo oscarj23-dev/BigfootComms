@@ -6,7 +6,7 @@ import { StyleSheet, View, Pressable, Alert, Image } from 'react-native';
 export default function TabCard(props) {
 	return (
 		<View>
-			<Pressable onPress={() => Alert.alert(`CONGRATS! You pressed the ${props.title} card!`)}>
+			<Pressable onPress={() => Alert.alert('You pressed the: '+ props.title + ' button!')}>
 				<Card containerStyle={styles.card}>	
 					<Image 
 						source={BackgroundImage.GetImage(props.image)} 

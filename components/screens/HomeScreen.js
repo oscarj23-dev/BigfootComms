@@ -2,10 +2,9 @@ import * as React from 'react';
 
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Alert } from 'react-native';
-
 import TabCard from '../card';
 
-export default function HomeScreen({ navigation }) {
+export default function HomeScreen() {
     return (
 			<View>
 				<StatusBar style='auto' />
@@ -17,7 +16,7 @@ export default function HomeScreen({ navigation }) {
 				<ScrollView style={styles.scrollView}>
 					<View style={styles.cardContainer}>
 						<TabCard title='Calendar' image='calendar.png' />
-						<TabCard title='news' image='news.png'/>
+						<TabCard title='News' image='news.png'/>
 						<TabCard title='Elder Resources' image='elder-resources.png' />
 						<TabCard title='Resources' image='resources.png' />
 						<TabCard title='Tribal Government' image='tribal.png' />
