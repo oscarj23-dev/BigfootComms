@@ -9,7 +9,7 @@ import ResourcesScreen from './components/screens/Resources';
 import SettingsScreen from './components/screens/Settings';
 
 // Screen Names
-const mainName = "Home";
+const mainName = "Main";
 const resourcesName = "Resources";
 const settingsName = "Settings";
 
