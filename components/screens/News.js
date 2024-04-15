@@ -20,11 +20,11 @@ export default function NewsScreen() {
 const styles = StyleSheet.create({
 	container : {
 		justifyContent: 'center',
-    padding: 20
+    padding: 10
 	},
   text: {
     fontSize: 26, 
-    padding: 5,
+    paddingTop: 10,
     fontWeight: 'bold', 
     color: 'rgba(5, 16, 101, 1)',
     alignContent: 'flex-start'

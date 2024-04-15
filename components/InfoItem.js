@@ -13,7 +13,6 @@ export default function InfoItem({ description, image }) {
               <Text style={styles.description}>{description}</Text>
             </View>
           </View>
-          <Card.Divider />
           {/* You can add additional content here if needed */}
         </Card>
       </Pressable>
@@ -28,13 +27,14 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 378,
+    height: 'auto',
     borderRadius: 35,
+    
   },
   content: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 10,
-    paddingVertical: 8,
   },
   image: {
     width: 88,

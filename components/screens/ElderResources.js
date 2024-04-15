@@ -1,13 +1,30 @@
 import * as React from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, ScrollView, StyleSheet} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-
+import InfoItem from '../InfoItem';
 export default function ElderResourcesScreen() {
 	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar style='auto' />
-				<Text onPress={() => navigation.navigate('Home')}
-					style={{ fontSize: 26, fontWeight: 'bold'}}> Elder Resources Screen</Text>
-			</View>
+			<InfoItem description={"Colvill Area Agency on Aging Website"}/>
+      <InfoItem description={"Senior Meal Sites Information"}/>
+      <InfoItem description={"Senior Health Insurance Benefits Assistance"}/>
+			<Text style={styles.text}> More Coming Soon! </Text>
+		</ScrollView>
 	);
 }
+
+const styles = StyleSheet.create({
+	container : {
+		alignItems: 'center', 
+		justifyContent: 'center',
+		padding: 10
+	},
+	text: {
+    fontSize: 26, 
+    paddingTop: 10,
+    fontWeight: 'bold', 
+    color: 'rgba(5, 16, 101, 1)',
+    alignContent: 'flex-start'
+  }
+});
