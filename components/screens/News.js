@@ -8,10 +8,11 @@ export default function NewsScreen() {
     <ScrollView contentContainerStyle={styles.container}>
       <StatusBar style='auto' />
       <Text style={styles.text}> Recent News</Text>
-      <InfoItem description={"A Brief History of the Confederated Tribes of the Colville Reservation"}/>
-      <InfoItem description={"Colville Cultural Information"}/>
+      <InfoItem description={"Tribal Council Announces Innovative Environmental Initiative to Preserve Colville Reservation's Natural Beauty"}
+        image={"noti-bell.png"} />
+      <InfoItem description={"Colville Reservation Recognized for Excellence in Tribal Education Initiatives"} image={"noti-bell.png"} />
       <Text style={styles.text}> Past Events</Text>
-      <InfoItem description={"Winter Pow wow"}/>
+      <InfoItem description={"Colville Cultural Information"}/>
       <InfoItem description={"Food Drive on 5th"}/>
     </ScrollView>
 	);

@@ -7,16 +7,16 @@ export default function PublicHealthScreen() {
 	return (
 		<ScrollView contentContainerStyle={styles.container} scrollEnabled={true}>
 			<StatusBar style='auto' />
-			<Text style={{ fontSize: 26, fontWeight: 'bold'}}> Public Health Resources</Text>
 			
-			<InfoItem description={"Mental Health Chat"} />
-			<InfoItem description={"CCT Mental Health Hotline"} />
-			<InfoItem description={"Suicide Crisis Line"} />
-			<Text style={{ fontSize: 26, fontWeight: 'bold'}}>Addiction Resources</Text>
+			<Text style={{ fontSize: 26, fontWeight: 'bold'}}> Mental Health Resources</Text>
+			<InfoItem description={"Mental Health Chat"} image={"suicide-crisis-lifeline.png"} />
+			<InfoItem description={"CCT Mental Health Hotline"} image={"blue-phone.png"} />
+			<InfoItem description={"Suicide Crisis Line"} image={"blue-phone.png"} />
 
-			<InfoItem description={"Find Naloxone Near You"} />
-			<InfoItem description={"SAMHSA National Helpline 1-800-662-4257"} />
-			<InfoItem description={"Treatment Centers Near You"} />
+			<Text style={{ fontSize: 26, fontWeight: 'bold'}}>Addiction Resources</Text>
+			<InfoItem description={"Find Naloxone Near You"} image={"stop-overdose.png"} />
+			<InfoItem description={"SAMHSA National Helpline 1-800-662-4257"} image={"blue-phone.png"} />
+			<InfoItem description={"Treatment Centers Near You"} image={"handshake.png"} />
 		</ScrollView>
 	);
 }
