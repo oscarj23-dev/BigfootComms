@@ -1,13 +1,34 @@
 import * as React from 'react';
-import { View, Text} from 'react-native';
+import { Text, ScrollView, StyleSheet} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+
+import InfoItem from '../InfoItem';
 
 export default function AboutUsScreen() {
 	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar style='auto' />
-				<Text onPress={() => navigation.navigate('Home')}
-					style={{ fontSize: 26, fontWeight: 'bold'}}> About Us Screen</Text>
-			</View>
+				<Text style={styles.text}> About Us Screen</Text>
+			<InfoItem description={"A Brief History of the Confederated Tribes of the Colville Reservation"}/>
+      <InfoItem description={"Colville Cultural Information"}/>
+      <Text style={styles.text}>Visitors Guide</Text>
+      <InfoItem description={"Colville Public Accessible Landmark Information"}/>
+      <InfoItem description={"Map of the Colville Reservation"}/>
+      <InfoItem description={"Tourism and Information"}/>
+		</ScrollView>
 	);
 }
+
+const styles = StyleSheet.create({
+	container: {
+		alignItems: 'center', 
+		justifyContent: 'center',
+		padding: 10
+	}, 
+	text: {
+    fontSize: 26, 
+    paddingTop: 10,
+    fontWeight: 'bold', 
+    color: 'rgba(5, 16, 101, 1)',
+  }
+});
