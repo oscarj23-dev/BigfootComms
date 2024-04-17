@@ -8,13 +8,12 @@ export default function AboutUsScreen() {
 	return (
 		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar style='auto' />
-				<Text style={styles.text}> About Us Screen</Text>
-			<InfoItem description={"A Brief History of the Confederated Tribes of the Colville Reservation"}/>
-      <InfoItem description={"Colville Cultural Information"}/>
+			<InfoItem description={"A Brief History of the Confederated Tribes of the Colville Reservation"} image={"native-horses.png"}/>
+      <InfoItem description={"Colville Cultural Information"} image={"flo-dell.png"}/>
       <Text style={styles.text}>Visitors Guide</Text>
-      <InfoItem description={"Colville Public Accessible Landmark Information"}/>
-      <InfoItem description={"Map of the Colville Reservation"}/>
-      <InfoItem description={"Tourism and Information"}/>
+      <InfoItem description={"Colville Public Accessible Landmark Information"} image={"colville-hike.png"}/>
+      <InfoItem description={"Map of the Colville Reservation"}image={"colville-map.png"}/>
+      <InfoItem description={"Tourism and Information"} image={"coulee-dam.png"}/>
 		</ScrollView>
 	);
 }

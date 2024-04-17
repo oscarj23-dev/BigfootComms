@@ -7,10 +7,10 @@ export default function ResourcesScreen() {
 	return (
 		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar style='auto' />
-			<InfoItem description={"Map of the Colville Reservation"}/>
-      <InfoItem description={"Hunting License Information"}/>
-      <InfoItem description={"Community Contaacts"}/>
-      <InfoItem description={"Application Feedback"}/>
+			<InfoItem description={"Map of the Colville Reservation"} image={"colville-map.png"}/>
+      <InfoItem description={"Hunting License Information"} image={"hunting-license-image.png"}/>
+      <InfoItem description={"Community Contaacts"} image={"orange-contact.png"}/>
+      <InfoItem description={"Application Feedback"} image={"feedback-image.png"}/>
 				<Text onPress={() => navigation.navigate('Home')}
 					style={styles.text}> More Coming Soon!</Text>
 		</ScrollView>

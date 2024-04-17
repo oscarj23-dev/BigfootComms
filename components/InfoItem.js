@@ -1,4 +1,5 @@
 import React from 'react';
+import { BackgroundImage } from './ImageStorage';
 import { Card, Text } from '@rneui/themed'; // Assuming Text is imported from react-native
 import { StyleSheet, Alert, View, Pressable, Image } from 'react-native';
 
@@ -8,7 +9,7 @@ export default function InfoItem({ description, image }) {
       <Pressable onPress={() => Alert.alert("You pressed an Info Item component")}>
         <Card containerStyle={styles.card}>
           <View style={styles.content}>
-            <Image source={image} style={styles.image} />
+            <Image source={BackgroundImage.GetImage(image)} style={styles.image} />
             <View style={styles.textContainer}>
               <Text style={styles.description}>{description}</Text>
             </View>

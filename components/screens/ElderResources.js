@@ -6,9 +6,9 @@ export default function ElderResourcesScreen() {
 	return (
 		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar style='auto' />
-			<InfoItem description={"Colvill Area Agency on Aging Website"}/>
-      <InfoItem description={"Senior Meal Sites Information"}/>
-      <InfoItem description={"Senior Health Insurance Benefits Assistance"}/>
+			<InfoItem description={"Colvill Area Agency on Aging Website"} image={"blue-robe-woman.png"}/>
+      <InfoItem description={"Senior Meal Sites Information"} image={"lady-elder-pancho.png"}/>
+      <InfoItem description={"Senior Health Insurance Benefits Assistance"} image={"shiba.png"}/>
 			<Text style={styles.text}> More Coming Soon! </Text>
 		</ScrollView>
 	);
