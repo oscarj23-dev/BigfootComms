@@ -12,7 +12,7 @@ export default function AboutUsScreen() {
       <InfoItem description={"Colville Cultural Information"} image={"flo-dell.png"}/>
       <Text style={styles.text}>Visitors Guide</Text>
       <InfoItem description={"Colville Public Accessible Landmark Information"} image={"colville-hike.png"}/>
-      <InfoItem description={"Map of the Colville Reservation"}image={"colville-map.png"}/>
+      <InfoItem description={"Map of the Colville Reservation"} image={"colville-map.png"}/>
       <InfoItem description={"Tourism and Information"} image={"coulee-dam.png"}/>
 		</ScrollView>
 	);

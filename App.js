@@ -5,12 +5,14 @@ import { Ionicons } from '@expo/vector-icons';
 
 // Screens
 import MainContainer from './components/MainContainer';
-import ResourcesScreen from './components/screens/Resources';
+import CommunityUpdatesScreen from './components/screens/CommunityUpdates';
 import SettingsScreen from './components/screens/Settings';
+import { View } from 'react-native';
+import { color } from '@rneui/base';
 
 // Screen Names
 const mainName = "Main";
-const resourcesName = "Resources";
+const resourcesName = "Community";
 const settingsName = "Settings";
 
 const Tab = createBottomTabNavigator();
@@ -45,7 +47,7 @@ function App() {
           headerTitleStyle: { color: '#fff', fontSize: 20, fontWeight: 'bold' },
         })}>
 
-        <Tab.Screen name={resourcesName} component={ResourcesScreen} />
+        <Tab.Screen name={resourcesName} component={CommunityUpdatesScreen} />
         <Tab.Screen name={mainName} component={MainContainer} options={{headerShown:false,}} />
         <Tab.Screen name={settingsName} component={SettingsScreen} />
       </Tab.Navigator>
