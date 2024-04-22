@@ -12,8 +12,8 @@ export default function NewsScreen() {
         image={"noti-bell.png"} />
       <InfoItem description={"Colville Reservation Recognized for Excellence in Tribal Education Initiatives"} image={"noti-bell.png"} />
       <Text style={styles.text}> Past Events</Text>
-      <InfoItem description={"Colville Cultural Information"}/>
-      <InfoItem description={"Food Drive on 5th"}/>
+      <InfoItem description={"Colville Cultural Information"}  image={"noti-bell.png"}/>
+      <InfoItem description={"Food Drive on 5th"}  image={"noti-bell.png"}/>
     </ScrollView>
 	);
 }
