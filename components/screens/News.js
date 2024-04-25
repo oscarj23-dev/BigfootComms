@@ -9,11 +9,11 @@ export default function NewsScreen() {
       <StatusBar style='auto' />
       <Text style={styles.text}> Recent News</Text>
       <InfoItem description={"Tribal Council Announces Innovative Environmental Initiative to Preserve Colville Reservation's Natural Beauty"}
-        image={"noti-bell.png"} />
-      <InfoItem description={"Colville Reservation Recognized for Excellence in Tribal Education Initiatives"} image={"noti-bell.png"} />
+        image={"notification-alert.png"} />
+      <InfoItem description={"Colville Reservation Recognized for Excellence in Tribal Education Initiatives"} image={"notification-alert.png"} />
       <Text style={styles.text}> Past Events</Text>
-      <InfoItem description={"Colville Cultural Information"}  image={"noti-bell.png"}/>
-      <InfoItem description={"Food Drive on 5th"}  image={"noti-bell.png"}/>
+      <InfoItem description={"Colville Cultural Information"}  image={"notification-alert.png"}/>
+      <InfoItem description={"Food Drive on 5th"}  image={"notification-alert.png"}/>
     </ScrollView>
 	);
 }

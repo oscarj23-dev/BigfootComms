@@ -7,8 +7,6 @@ import { Ionicons } from '@expo/vector-icons';
 import MainContainer from './components/MainContainer';
 import CommunityUpdatesScreen from './components/screens/CommunityUpdates';
 import SettingsScreen from './components/screens/Settings';
-import { View } from 'react-native';
-import { color } from '@rneui/base';
 
 // Screen Names
 const mainName = "Main";
