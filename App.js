@@ -2,6 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { usePushNotifications } from './components/PushNotifications';
 
 // Screens
 import MainContainer from './components/MainContainer';
@@ -16,7 +17,10 @@ const settingsName = "Settings";
 const Tab = createBottomTabNavigator();
 
 function App() {
+  const { expoPushToken, notification } = usePushNotifications();
+  const data = JSON.stringify(notification, undefined, 2)
   return (
+
     <NavigationContainer>
       <Tab.Navigator 
         initialRouteName={mainName}
