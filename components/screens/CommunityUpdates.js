@@ -1,10 +1,13 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { View, Text, ScrollView} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+
 
 import InfoItem from '../InfoItem';
 
 export default function CommunityUpdatesScreen() {
+
 	return (
     <ScrollView>
       <View style={{ display:'flex', justifyContent: 'center' }}>
