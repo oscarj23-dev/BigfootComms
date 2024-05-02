@@ -7,11 +7,39 @@ interface State {
   items?: AgendaSchedule;
 }
 
-export default class AgendaScreen extends Component<State> {
-  state: State = {
-    items: undefined
-  };
+const generateDummyData = (): AgendaSchedule => {
+  const dummyData: AgendaSchedule = {};
 
+  // Generate dummy dates
+  const startDate = new Date(); // Today's date
+  for (let i = 0; i < 7; i++) {
+    const currentDate = new Date(startDate);
+    currentDate.setDate(startDate.getDate() + i); // Increment date by i days
+
+    // Format date as "YYYY-MM-DD"
+    const formattedDate = currentDate.toISOString().split('T')[0];
+
+    // Generate dummy entries for each date
+    const dummyEntries: AgendaEntry[] = [];
+    for (let j = 0; j < Math.floor(Math.random() * 5) + 1; j++) { // Generate 1 to 5 dummy entries
+      dummyEntries.push({
+        name: `Event ${j + 1}`,
+        height:Math.max(50, Math.floor(Math.random() * 150)), // Random height
+        day: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][currentDate.getDay()] // Get day of the week
+      });
+    }
+
+    dummyData[formattedDate] = dummyEntries;
+  }
+
+  return dummyData;
+};
+const state: State = {
+  items: generateDummyData(),
+};
+
+
+export default class AgendaScreen extends Component<State> {  
   // reservationsKeyExtractor = (item, index) => {
   //   return `${item?.reservation?.day}${index}`;
   // };
@@ -20,41 +48,27 @@ export default class AgendaScreen extends Component<State> {
     return (
       <Agenda
         testID={testIDs.agenda.CONTAINER}
-        items={this.state.items}
+        items={state.items}
         loadItemsForMonth={this.loadItems}
-        selected={'2017-05-16'}
+        selected={new Date().toString()}
         renderItem={this.renderItem}
         renderEmptyDate={this.renderEmptyDate}
         rowHasChanged={this.rowHasChanged}
         showClosingKnob={true}
-        // markingType={'period'}
-        // markedDates={{
-        //    '2017-05-08': {textColor: '#43515c'},
-        //    '2017-05-09': {textColor: '#43515c'},
-        //    '2017-05-14': {startingDay: true, endingDay: true, color: 'blue'},
-        //    '2017-05-21': {startingDay: true, color: 'blue'},
-        //    '2017-05-22': {endingDay: true, color: 'gray'},
-        //    '2017-05-24': {startingDay: true, color: 'gray'},
-        //    '2017-05-25': {color: 'gray'},
-        //    '2017-05-26': {endingDay: true, color: 'gray'}}}
-        // monthFormat={'yyyy'}
-        // theme={{calendarBackground: 'red', agendaKnobColor: 'green'}}
-        // renderDay={this.renderDay}
-        // hideExtraDays={false}
-        // showOnlySelectedDayItems
-        // reservationsKeyExtractor={this.reservationsKeyExtractor}
       />
     );
   }
 
   loadItems = (day: DateData) => {
-    const items = this.state.items || {};
+    const items = state.items || {};
+    console.log("STATE IS: " + state.items);
 
     setTimeout(() => {
-      for (let i = -15; i < 85; i++) {
+      for (let i = 0; i < 7; i++) {
         const time = day.timestamp + i * 24 * 60 * 60 * 1000;
         const strTime = this.timeToString(time);
-
+        console.log("CALCULATED TIME IS: " + strTime)
+        console.log("ITEMS AT STRTIME: " + !items[strTime])
         if (!items[strTime]) {
           items[strTime] = [];
           

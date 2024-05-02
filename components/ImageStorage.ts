@@ -25,11 +25,8 @@
       ['tribal.png',
       require('../assets/app-images/tribal.png')
       ],
-      ['blue-phone.png',
-      require('../assets/app-images/blue-phone.png')
-      ],
-      ['blue-robe-woman.png',
-      require('../assets/app-images/blue-robe-woman.png')
+      ['phone-ringing.png',
+      require('../assets/app-images/phone-ringing.png')
       ],
       ['colville-hike.png',
       require('../assets/app-images/colville-hike.png')
@@ -46,14 +43,11 @@
       ['flo-dell.png',
       require('../assets/app-images/flo-dell.png')
       ],
-      ['handshake.png',
-      require('../assets/app-images/handshake.png')
+      ['helping-hands.avif',
+      require('../assets/app-images/helping-hands.avif')
       ],
       ['hunting-license-image.png',
       require('../assets/app-images/hunting-license-image.png')
-      ],
-      ['lady-elder-pancho.png',
-      require('../assets/app-images/lady-elder-pancho.png')
       ],
       ['native-horses.png',
       require('../assets/app-images/native-horses.png')
@@ -61,17 +55,29 @@
       ['orange-contact.png',
       require('../assets/app-images/orange-contact.png')
       ],
-      ['suicide-crisis-lifeline.png',
-      require('../assets/app-images/suicide-crisis-lifeline.png')
+      ['988-logo.png',
+      require('../assets/app-images/988-logo.png')
       ],
-      ['stop-overdose.png',
-      require('../assets/app-images/stop-overdose.png')
+      ['stop-overdose.jpg',
+      require('../assets/app-images/stop-overdose.jpg')
       ],
-      ['shiba.png',
-      require('../assets/app-images/shiba.png')
+      ['notification-alert.png',
+      require('../assets/app-images/notification-alert.png')
       ],
-      ['noti-bell.png',
-      require('../assets/app-images/noti-bell.png')
+      ['inchelium-meal-site.jpeg',
+      require('../assets/app-images/inchelium-meal-site.jpeg')
+      ],
+      ['keller-meal-site.jpeg',
+      require('../assets/app-images/keller-meal-site.jpeg')
+      ],
+      ['nespelem-meal-site.jpeg',
+      require('../assets/app-images/nespelem-meal-site.jpeg')
+      ],
+      ['bhp-logo.png',
+      require('../assets/app-images/bhp-logo.png')
+      ],
+      ['shiba-hd-logo.png',
+      require('../assets/app-images/shiba-hd-logo.png')
       ],
       ['elder-resources.png',
       require('../assets/app-images/elder-resources.png')
