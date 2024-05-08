@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NativeStackView, createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
 import HomeScreen from './screens/HomeScreen';
@@ -16,7 +16,10 @@ const Stack = createNativeStackNavigator();
 
 export default function MainContainer() {
   return (
-    <Stack.Navigator>
+    
+    <Stack.Navigator screenOptions={{contentStyle: {
+      borderWidth:0,
+    }}} >
       <Stack.Screen name="Home" component={HomeScreen} options={{
         headerStyle: {backgroundColor: "rgba(5, 16, 101, 1)"},
         headerTitleStyle: {color: "#fff", fontWeight:"bold", fontSize: 20},
@@ -79,7 +82,6 @@ export default function MainContainer() {
         headerTintColor: "#fff",
         headerBackTitleVisible: false
       }} />
-
     </Stack.Navigator>
   );
 }
