@@ -62,26 +62,6 @@ export default function Example() {
               </View>
 
               <View style={styles.rowWrapper}>
-                <View style={styles.row}>
-                  <View
-                    style={[styles.rowIcon, { backgroundColor: '#007AFF' }]}>
-                    <FeatherIcon
-                      color="#fff"
-                      name="moon"
-                      size={20} />
-                  </View>
-
-                  <Text style={styles.rowLabel}>Dark Mode</Text>
-
-                  <View style={styles.rowSpacer} />
-
-                  <Switch
-                    onValueChange={darkMode => setForm({ ...form, darkMode })}
-                    value={form.darkMode} />
-                </View>
-              </View>
-
-              <View style={styles.rowWrapper}>
                 <TouchableOpacity
                   onPress={() => {
                     // handle onPress
@@ -91,15 +71,15 @@ export default function Example() {
                     style={[styles.rowIcon, { backgroundColor: '#32c759' }]}>
                     <FeatherIcon
                       color="#fff"
-                      name="navigation"
+                      name="type"
                       size={20} />
                   </View>
 
-                  <Text style={styles.rowLabel}>Location</Text>
+                  <Text style={styles.rowLabel}>Text Size</Text>
 
                   <View style={styles.rowSpacer} />
 
-                  <Text style={styles.rowValue}>Los Angeles, CA</Text>
+                  <Text style={styles.rowValue}>Aa</Text>
 
                   <FeatherIcon
                     color="#C6C6C6"
@@ -110,7 +90,7 @@ export default function Example() {
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Notifications</Text>
+              <Text style={styles.sectionTitle}>Application Settings</Text>
 
               <View style={styles.sectionBody}>
                 <View style={[styles.rowWrapper, styles.rowFirst]}>
@@ -119,7 +99,7 @@ export default function Example() {
                       style={[styles.rowIcon, { backgroundColor: '#38C959' }]}>
                       <FeatherIcon
                         color="#fff"
-                        name="at-sign"
+                        name="mail"
                         size={20} />
                     </View>
 
@@ -138,7 +118,7 @@ export default function Example() {
                 <View style={styles.rowWrapper}>
                   <View style={styles.row}>
                     <View
-                      style={[styles.rowIcon, { backgroundColor: '#38C959' }]}>
+                      style={[styles.rowIcon, { backgroundColor: 'blue' }]}>
                       <FeatherIcon
                         color="#fff"
                         name="bell"
@@ -181,6 +161,88 @@ export default function Example() {
                       color="#C6C6C6"
                       name="chevron-right"
                       size={20} />
+                  </TouchableOpacity>
+                </View>
+
+                <View style={styles.rowWrapper}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      // handle onPress
+                    }}
+                    style={styles.row}>
+                    <View
+                      style={[styles.rowIcon, { backgroundColor: '#97D4D0' }]}>
+                      <FeatherIcon
+                        color="#fff"
+                        name="user"
+                        size={20} />
+                    </View>
+
+                    <Text style={styles.rowLabel}>Accessibility</Text>
+
+                    <View style={styles.rowSpacer} />
+
+                    <FeatherIcon
+                      color="#C6C6C6"
+                      name="chevron-right"
+                      size={20} />
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>More</Text>
+
+              <View style={styles.sectionBody}>
+                <View style={[styles.rowWrapper, styles.rowFirst]}>
+                  <TouchableOpacity
+                      onPress={() => {
+                        // handle onPress
+                      }}
+                      style={styles.row}>
+                      <View
+                        style={[styles.rowIcon, { backgroundColor: '#38C959' }]}>
+                        <FeatherIcon
+                          color="#fff"
+                          name="at-sign"
+                          size={20} />
+                      </View>
+
+                      <Text style={styles.rowLabel}>More</Text>
+
+                      <View style={styles.rowSpacer} />
+
+                      <FeatherIcon
+                        color="#C6C6C6"
+                        name="chevron-right"
+                        size={20} />
+                    </TouchableOpacity>
+                  </View>
+                <View style={styles.rowWrapper}>
+
+                  <TouchableOpacity
+                    onPress={() => {
+                      // handle onPress
+                    }}>
+                      <View style={styles.row}>
+                        <View
+                          style={[styles.rowIcon, { backgroundColor: 'gray' }]}>
+                          <FeatherIcon
+                            color="#fff"
+                            name="lock"
+                            size={20} />
+                        </View>
+
+                        <Text style={styles.rowLabel}>Privacy Settings</Text>
+
+                        <View style={styles.rowSpacer} />
+
+                        <FeatherIcon
+                          color="#C6C6C6"
+                          name="chevron-right"
+                          size={20} />
+                      </View>
                   </TouchableOpacity>
                 </View>
               </View>

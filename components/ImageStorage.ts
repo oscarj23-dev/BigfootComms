@@ -82,6 +82,15 @@
       ['elder-resources.png',
       require('../assets/app-images/elder-resources.png')
       ],
+      ['centralized-services.webp',
+      require('../assets/app-images/centralized-services.webp')
+      ],
+      ['favicon.jpeg',
+      require('../assets/app-images/favicon.jpeg')
+      ],
+      ['tribal-health.jpeg',
+      require('../assets/app-images/tribal-health.jpeg')
+      ],
     ]);
 
     static GetImage = (key:string):NodeRequire => {

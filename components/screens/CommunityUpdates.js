@@ -5,7 +5,7 @@ import { firebase } from '../../firebaseConfig';
 import InfoItem from '../InfoItem';
 
 export default function CommunityUpdatesScreen() {
-  const [users, setUsers] = useState([]);
+  const [updates, setUpdates] = useState([]);
 
   useEffect(() => {
     const communityCollection = firebase.firestore().collection('communityUpdates');
@@ -20,7 +20,7 @@ export default function CommunityUpdatesScreen() {
           date,
         });
       });
-      setUsers(fetchedUsers);
+      setUpdates(fetchedUsers);
     });
 
     // Clean up the subscription when the component unmounts
@@ -43,7 +43,7 @@ export default function CommunityUpdatesScreen() {
       </Text>
       <View style={{ display:'flex', justifyContent: 'center' }}>
         <StatusBar style='auto' />
-        {users.map(user => (
+        {updates.map(user => (
           <InfoItem 
             key={user.id}
             title={user.title}
